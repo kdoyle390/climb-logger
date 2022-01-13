@@ -14,8 +14,8 @@ function FAForm() {
                 <label for="type">Route Type: </label>
                 <select id="type" name="type">
                     <option value="boulder">Boulder</option>
-                    <option value="sport">Sport</option>
-                    <option value="trad">Trad</option>
+                    <option value="lead">Lead</option>
+                    <option value="top-rope">Toprope</option>
                 </select>
 
                 <label for="grade"> Grade: </label>
