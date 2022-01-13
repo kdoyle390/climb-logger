@@ -71,3 +71,11 @@ code {
   width: 50%;
   border: 1px solid black;
 }
+
+#login {
+  background-color: blue;
+}
+
+#signup {
+  background-color: lavender;
+}
