@@ -5,6 +5,7 @@ import LogContainer from './LogContainer'
 import FindARoute from './FindARoute'
 import Login from './Login'
 import Signup from './Signup'
+import { Link } from 'react-router-dom'
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       <CreateFA />
       <LogContainer />
       <FindARoute />
+      {/* <nav>
+        <Link to='/home'></Link>
+      </nav> */}
     </div>
   );
 }
