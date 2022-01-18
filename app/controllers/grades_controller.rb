@@ -1,5 +1,20 @@
 class GradesController < ApplicationController
-    has_many :routes
-    belongs_to :type
-    belongs_to :log
+    
+
+    def index
+        grades = Grade.all
+        render json: grades
+    end
+
+    
+    def show
+        grade = Grade.find_by(id: params[:id])
+        if grade 
+            render json: grade
+        else 
+            render json: { error: "record not found"}, status: :not_found
+            
+        end
+    end
+
 end

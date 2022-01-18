@@ -1,4 +1,8 @@
 class RatingsController < ApplicationController
-    belongs_to :route
-    belongs_to :user
+
+    def index
+        ratings = Rating.all
+        render json: ratings
+    end
+    
 end

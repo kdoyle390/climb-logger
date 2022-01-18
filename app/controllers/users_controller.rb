@@ -1,6 +1,18 @@
 class UsersController < ApplicationController
-    has_many :routes
-    has_many :logs
-    has_many :ratings
+    
+    def index
+        users = User.all
+        render json: users
+    end
+
+    def show
+        user = User.find_by(id: params[:id])
+        if user
+            render json: user
+        else 
+            render json: { error: "record not found"}, status: :not_found
+            
+        end
+    end
 
 end

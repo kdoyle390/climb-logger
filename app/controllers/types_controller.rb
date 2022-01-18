@@ -1,4 +1,18 @@
 class TypesController < ApplicationController
-    belongs_to :route
-    belongs_to :log
+    
+    def index
+        types = Type.all
+        render json: types
+    end
+
+    def show
+        type = Type.find_by(id: params[:id])
+        if log
+            render json: type
+        else 
+            render json: { error: "record not found"}, status: :not_found
+            
+        end
+    end
+
 end
