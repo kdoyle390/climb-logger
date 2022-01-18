@@ -5,7 +5,7 @@ import LogContainer from './LogContainer'
 import RouteContainer from './RouteContainer'
 import Login from './Login'
 import Signup from './Signup'
-import { Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import { useEffect, useState } from 'react'
 
 function App() {
@@ -27,19 +27,38 @@ function App() {
   }
 
 
-
   return (
-    <div className="App">
-      <Home />
-      <Login />
-      <Signup />
-      <CreateFA />
-      <LogContainer />
-      <RouteContainer routeList={routeList} setRouteList={setRouteList}/>
-      {/* <nav>
-        <Link to='/home'></Link>
-      </nav> */}
-    </div>
+  <>
+    <nav id="navbar">
+      <Link to="/">Home</Link>
+      <Link to="/login">Login</Link>
+      <Link to="/singup">Signup</Link>
+      <Link to="/create-route">Create a First Ascent</Link>
+      <Link to="/logs">Your Log</Link>
+      <Link to="/search">Find a Route</Link>
+    </nav>
+      <Routes>
+        <Route path ="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/create-route" element={<CreateFA />} />
+        <Route path="/logs" element={<LogContainer />} />
+        <Route path="/search" element={<RouteContainer />} />
+      </Routes>
+
+
+    {/* // <div>
+      
+    //     <Home />
+    //     <Login />
+    //     <Signup />
+    //     <CreateFA />
+    //     <LogContainer />
+    //     <RouteContainer routeList={routeList} setRouteList={setRouteList}/>
+        
+
+    //  </div>  */}
+  </>
   );
 }
 

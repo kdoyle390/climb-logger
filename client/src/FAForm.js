@@ -6,7 +6,7 @@ function FAForm({handleAddRoute}) {
 // need to also figure out how to get the id values and to have them appear as ints in state
 
 const [gradeId, setGradeID] = useState()
-const [typeID, setTypeID] = useState()
+const [typeId, setTypeID] = useState()
 const [userId, setUserID] = useState()
 const [name, setName] = useState("")
 const [country, setCountry] = useState("")
@@ -28,7 +28,7 @@ const [gymRoute, setGymRoute] = useState(false)
             crag: crag,
             comments: comments,
             coordinates: coordinates,
-            gym_route: gymq
+            gym_route: gymRoute
         };
         fetch('http://localhost:3000/routes', {
             method: "POST", 
@@ -38,7 +38,7 @@ const [gymRoute, setGymRoute] = useState(false)
             body: JSON.stringify(routeData),
         })
         .then((r)=> r.json())
-        .then((newRoute) => handleAddRoute())
+        .then((newRoute) => handleAddRoute(newRoute))
     }
 
 
@@ -46,9 +46,9 @@ const [gymRoute, setGymRoute] = useState(false)
         <div id="fa-form-container">
             <form id="fa-form">
                 <label for="gymq">Is this a gym route? </label>
-                <input type="radio" value={true} name="gymq"></input>
+                <input type="radio" value={true} onChange={(e) => setGymRoute(true)} name="gymq"></input>
                 <label for="yes">Yes</label>
-                <input type="radio" name="gymq" value={false}></input>
+                <input type="radio" name="gymq" value={false} onChange={(e) => setGymRoute(false)}></input>
                 <label for="no">No</label>
 
                 <label for="date-sent">First Ascent Date: </label>
