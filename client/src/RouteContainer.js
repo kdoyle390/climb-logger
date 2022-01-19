@@ -13,9 +13,10 @@ function RouteContainer() {
     .then(resp => resp.json())
     .then(data => setRouteList(data))
   }, [])
-const routelistings = routeList.map(route => <RouteCard route={route} key={route.id} handleAddRoute={handleAddRoute} />)
-// const searchedRoutes = routeList.filter(route => {
-//     return route.name.toLowerCase().includes(searchTerm.toLowerCase()) || route.crag.toLowerCase().includes(searchTerm.toLowerCase())})
+// const routelistings = routeList.map(route => <RouteCard route={route} key={route.id} handleAddRoute={handleAddRoute} />)
+const searchedRoutes = routeList.filter(route => {
+    return route.name.toLowerCase().includes(searchTerm.toLowerCase()) || route.crag.toLowerCase().includes(searchTerm.toLowerCase())})
+const returnedRoutes = searchedRoutes.map(route => <RouteCard route={route} key={route.id} handleAddRoute={handleAddRoute} />)
 
 function handleAddRoute(newRoute) {
     setRouteList([...routeList, newRoute])
@@ -25,8 +26,8 @@ function handleAddRoute(newRoute) {
         <div id="route-container">
             <RouteSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             Route container
-            {/* {searchedRoutes} */}
-            {routelistings}
+            {returnedRoutes}
+            {/* {routelistings} */}
         </div>
     )
 }

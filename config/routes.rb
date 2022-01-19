@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   
   resources :logs
-  resources :routes
+  resources :routes do
+    resources :users, only: [:show]
+    resources :grades, only: [:show]
+  end
   resources :users
   resources :ratings
   resources :grades

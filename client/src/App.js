@@ -27,13 +27,29 @@ function handleLogin(user) {
 
   return (
   <>
-    <nav id="navbar">
-      <Link to="/">Home</Link>
-      <Link to="/login">Login</Link>
-      <Link to="/signup">Signup</Link>
-      <Link to="/create-route">Create a First Ascent</Link>
-      <Link to="/logs">Your Log</Link>
-      <Link to="/search">Find a Route</Link>
+    <div className="header">
+      <h1>Climb Logger</h1>
+    </div>
+    <nav id="navbar">    
+        <a className="page-links">
+          <Link to="/">Home</Link>
+        </a>
+        <a className="page-links">
+          <Link to="/login">Login</Link>
+        </a>
+        <a className="page-links">
+          <Link to="/signup">Signup</Link>
+        </a>
+        <a className="page-links">
+          <Link to="/create-route">Create a First Ascent</Link>
+        </a>
+        <a className="page-links">
+          <Link to="/logs">Your Log</Link>
+        </a>
+        <a className="page-links">
+          <Link to="/search">Find a Route</Link>
+        </a>
+
     </nav>
       <Routes>
         <Route path ="/" element={<Home />} />
@@ -45,17 +61,7 @@ function handleLogin(user) {
       </Routes>
 
 
-    {/* // <div>
-      
-    //     <Home />
-    //     <Login />
-    //     <Signup />
-    //     <CreateFA />
-    //     <LogContainer />
-    //     <RouteContainer routeList={routeList} setRouteList={setRouteList}/>
-        
-
-    //  </div>  */}
+   
   </>
   );
 }

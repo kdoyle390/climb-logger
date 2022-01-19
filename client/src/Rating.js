@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Star from './Star';
 
 
-function Rating({ onChange }) {
+function Rating({ onChange, routeid }) {
 
 const [rating, setRating] = useState(0)
 const starRating = [1, 2, 3, 4, 5]
@@ -11,38 +11,41 @@ const starRating = [1, 2, 3, 4, 5]
 const changeRating = (newRating) => {
     setRating(newRating);
     onChange?.(newRating);
+}
 
-    // e.preventDefault()
-    // console.log("Star rating clicked")
-    // const ratingData = {
-    //     content: reviewContent,
-
-    // }
-    // fetch("http://localhost:6001/songs", {
-    //     method: "POST",
-    //     headers: {"Content-Type": "application/json",
-    // },
-    //     body: JSON.stringify(reviewData),
-    // })
-    // .then(res => res.json())
-    // .then(newReview => handleAddReview(newReview))
-
-    // setReviewContent("")
+function handleSaveRating(e) {
+    e.preventDefault()
+    console.log("submit clicked")
+    console.log(routeid)
+    const ratingData = {
+        user_id: 3,
+        route_id: routeid,
+        rating: rating
+    }
+    fetch("http://localhost:3000/ratings", {
+        method: "POST",
+        headers: {"Content-Type": "application/json",
+    },
+        body: JSON.stringify(ratingData),
+    })
+    .then(res => res.json())
+    .then(newRating => console.log(newRating))
 }
 
 
 
     return(
-       
-       <div className="star-rating">
-        {starRating.map((value) => (
-            <Star key={value}
-            filled={value <= rating}
-            onClick={ () => changeRating(value)} 
-            />
-        ))}
-
-       </div>
+       <>
+        <div className="star-rating">
+            {starRating.map((value) => (
+                <Star key={value}
+                filled={value <= rating}
+                onClick={ () => changeRating(value)} 
+                />
+            ))}
+        <button id="save" onClick={(e) => handleSaveRating(e)}>Save rating</button>
+        </div>
+       </>
     )
 }
 
