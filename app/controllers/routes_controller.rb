@@ -15,6 +15,21 @@ class RoutesController < ApplicationController
         end
     end
 
+    def create
+        route = Route.create(route_params)
+        if route.valid?
+            render json: route, status: :created
+        else 
+            render json: route.errors.full_messages
+        end
+    end
+
+
+
+private 
+    def route_params
+        params.permit(:grade_id, :type_id, :user_id, :name, :country, :crag, :comments, :coordinates, :gym_route)
+    end
 
     
 end

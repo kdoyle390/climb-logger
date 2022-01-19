@@ -79,3 +79,8 @@ code {
 #signup {
   background-color: lavender;
 }
+
+.star-rating:hover {
+  color: yellow;
+  
+}

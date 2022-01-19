@@ -29,7 +29,7 @@ function Signup() {
 
     return(
         <div id="signup">
-            <form id='signup-form'>
+            <form id='signup-form' onSubmit={handleSubmit}>
                 <label for="first-name">First name: </label>
                 <input type="text" name="first-name" onChange={(e) => setFirstName(e.target.value)} value={firstName}></input>
                 <label for="last-name">Last name: </label>
@@ -40,7 +40,7 @@ function Signup() {
                 <input type="password" onChange={(e) => setPassword(e.target.value)} value={password}></input>
                 <label for="confirm-password">Confirm password:</label>
                 <input type="password"></input>
-                <input type="submit" onSubmit={handleSubmit} ></input>
+                <input type="submit"></input>
             </form>
         </div>
     )

@@ -5,20 +5,21 @@ function FAForm({handleAddRoute}) {
 // need to figure out how to handle radio buttons on submit and how to grab user's id when adding route
 // need to also figure out how to get the id values and to have them appear as ints in state
 
-const [gradeId, setGradeID] = useState()
-const [typeId, setTypeID] = useState()
-const [userId, setUserID] = useState()
+const [gradeId, setGradeId] = useState(null)
+const [typeId, setTypeId] = useState(null)
+const [userId, setUserId] = useState(1)
 const [name, setName] = useState("")
 const [country, setCountry] = useState("")
 const [crag, setCrag] = useState("")
 const [comments, setComments] = useState("")
 const [coordinates, setCoordinates] = useState("")
-const [gymRoute, setGymRoute] = useState(false)
+const [gymRoute, setGymRoute] = useState(null)
 
-
+ 
 
     function handleSubmit(e) {
         e.preventDefault()
+
         const routeData = {
             grade_id: gradeId,
             type_id: typeId, 
@@ -30,7 +31,7 @@ const [gymRoute, setGymRoute] = useState(false)
             coordinates: coordinates,
             gym_route: gymRoute
         };
-        fetch('http://localhost:3000/routes', {
+        fetch('/routes', {
             method: "POST", 
             headers: {
                 "Content-Type": "application/json",
@@ -38,31 +39,32 @@ const [gymRoute, setGymRoute] = useState(false)
             body: JSON.stringify(routeData),
         })
         .then((r)=> r.json())
-        .then((newRoute) => handleAddRoute(newRoute))
+        .then((newRoute) => console.log(newRoute))
     }
-
 
     return(
         <div id="fa-form-container">
-            <form id="fa-form">
+            <form id="fa-form" onSubmit={handleSubmit}>
                 <label for="gymq">Is this a gym route? </label>
-                <input type="radio" value={true} onChange={(e) => setGymRoute(true)} name="gymq"></input>
+                <input type="radio" value={gymRoute} onChange={(e) => setGymRoute(true)} name="gymq"></input>
                 <label for="yes">Yes</label>
-                <input type="radio" name="gymq" value={false} onChange={(e) => setGymRoute(false)}></input>
+                <input type="radio" value={gymRoute} onChange={(e) => setGymRoute(false)} name="gymq"></input>
                 <label for="no">No</label>
 
-                <label for="date-sent">First Ascent Date: </label>
-                <input type="date" name="date-sent"></input>
+                {/* <label for="date-sent">First Ascent Date: </label>
+                <input type="date" name="date-sent" value={date} onChange={(e)=> setName(e.target.value)}></input> */}
 
                 <label for="type">Route Type: </label>
-                <select id="type" name="type">
-                    <option value="boulder">Boulder</option>
-                    <option value="lead">Lead</option>
-                    <option value="top-rope">Toprope</option>
+                <select id="type" name="type" onChange={(e) => setTypeId(e.target.value)}>
+                    <option></option>
+                    <option value={1}>Boulder</option>
+                    <option value={2}>Lead</option>
+                    <option value={3}>Toprope</option>
                 </select>
 
                 <label for="grade"> Grade: </label>
-                <select id="grade" name="grade">
+                <select id="grade" name="grade" onChange={(e) => setGradeId(e.target.value)}>
+                    <option></option>
                     <option value={1}>VB</option>
                     <option value={2}>V0</option>
                     <option value={3}>V1</option>
@@ -111,19 +113,22 @@ const [gymRoute, setGymRoute] = useState(false)
                 </select>
 
                 <label for="name">Name your Route: </label>
-                <input type="text" placeholder="name" value={name}></input> 
+                <input type="text" placeholder="name" value={name} onChange={(e) => setName(e.target.value)}></input> 
 
                 <label for="notes">Notes: </label>
-                <input id="comment-box" type="textarea" name="notes" placeholder="Leave some notes about your route. Directions to the route, tipes, crux info, etc."></input>
+                <input id="comment-box" type="textarea" name="notes" 
+                placeholder="Leave some notes about your route. Directions to the route, tipes, crux info, etc." 
+                value={comments}
+                onChange={(e) => setComments(e.target.value)}></input>
                 
                 <label for="country">Country: </label>
-                <input type="text" name="country"></input>
+                <input type="text" name="country" value={country} onChange={(e) => setCountry(e.target.value)}></input>
                 
                 <label for="crag">Crag Name: </label>
-                <input type="text" name="crag"></input>
+                <input type="text" name="crag" value={crag} onChange={(e) => setCrag(e.target.value)}></input>
                 
                 <label for="coordinates">Coordinates: </label>
-                <input type="text" name="coordinates"></input>
+                <input type="text" name="coordinates" vaue={coordinates} onChange={(e) => setCoordinates(e.target.value)}></input>
 
                 <input type="submit"></input>
             
