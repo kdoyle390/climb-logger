@@ -72,7 +72,7 @@ function onLogout() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/create-route" element={<CreateFA user={user} />} />
         <Route path="/logs" element={<LogContainer user={user} />} />
-        <Route path="/search" element={<RouteContainer />} />
+        <Route path="/search" element={<RouteContainer user={user} />} />
       </Routes>
 
 

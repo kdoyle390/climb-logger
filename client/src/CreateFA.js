@@ -6,7 +6,7 @@ function CreateFA({user}) {
     return(
         <>
         <div id="create-fa-page">
-            Create FA Page
+            
             <FAForm />
         </div>
         

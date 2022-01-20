@@ -43,7 +43,7 @@ function handleSaveRating(e) {
                 onClick={ () => changeRating(value)} 
                 />
             ))}
-        <button id="save" onClick={(e) => handleSaveRating(e)}>Save rating</button>
+        <button className="save" onClick={(e) => handleSaveRating(e)}>Save Rating</button>
         </div>
        </>
     )

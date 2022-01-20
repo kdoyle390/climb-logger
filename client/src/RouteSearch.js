@@ -8,13 +8,15 @@ function RouteSearch({routeList, searchTerm, setSearchTerm}) {
 
 
     return(
-        <div id='route-search'>
-            <p>Search for a Route by...</p>
-            <form>
-                <input type="text" placeholder="Find a route..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} ></input>
-                <button>Search</button>
-            </form>
+        <div id='route-search-container'>
+            <div id='route-search'>
+                <p>Search for a Route by name or crag</p>
+                <form>
+                    <input type="text" placeholder="Find a route..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} ></input>
+                    
+                </form>
 
+            </div>
         </div>
     )
 

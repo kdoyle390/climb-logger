@@ -116,28 +116,28 @@ const [gymRoute, setGymRoute] = useState(null)
                 </p>
                 <p>
                     <label for="name">Name your Route: </label>
-                    <input type="text" placeholder="name" value={name} onChange={(e) => setName(e.target.value)}></input> 
+                    <input type="text" placeholder="get creative..." value={name} onChange={(e) => setName(e.target.value)}></input> 
                 </p>
                 <p>
                     <label for="notes">Notes: </label>
                     <input id="comment-box" type="textarea" name="notes" 
-                    placeholder="Leave some notes about your route. Directions to the route, tipes, crux info, etc." 
+                    placeholder="tips, directions, etc..." 
                     value={comments}
                     onChange={(e) => setComments(e.target.value)}></input>
                 </p>
                 <p>
                     <label for="country">Country: </label>
-                    <input type="text" name="country" value={country} onChange={(e) => setCountry(e.target.value)}></input>
+                    <input type="text" placeholder="eg 'USA'" name="country" value={country} onChange={(e) => setCountry(e.target.value)}></input>
                 </p>
                 <p>
                     <label for="crag">Crag Name: </label>
-                    <input type="text" name="crag" value={crag} onChange={(e) => setCrag(e.target.value)}></input>
+                    <input type="text" placeholder="climbing area..." name="crag" value={crag} onChange={(e) => setCrag(e.target.value)}></input>
                 </p>
                 <p>
                     <label for="coordinates">Coordinates: </label>
-                    <input type="text" name="coordinates" vaue={coordinates} onChange={(e) => setCoordinates(e.target.value)}></input>
+                    <input type="text" placeholder="eg '37.6225° N, 89.4119° W'" name="coordinates" vaue={coordinates} onChange={(e) => setCoordinates(e.target.value)}></input>
                 </p>
-                <input type="submit"></input>
+                <input className="submit" type="submit"></input>
             
             
             </form>

@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url('./images/bouldering.jpg');
   background-size: cover;
+  font-family: 'Rubik';
 }
 
 code {
@@ -21,9 +22,6 @@ code {
   border: 1px solid black;
 }
 
-#navbar a {
-  
-}
 
 div h1 {
   font-family: 'Russo One';
@@ -54,47 +52,70 @@ a:link {
 }
 
 a:hover {
-  background-color: #6292DF;
-
+  /* background-color: #6292DF; */
+  font-weight: bold;
+  color: black;
 }
 /* a:active {
   background-color: #D46C3C;
 } */
 
+a:visted {
+  color: black;
+}
+
 
 #home-container {
   width: 100%;
   background-color: grey;
-  color: white;
-  align: bottom;
+  color: white;;
     
 }
 
 
 
 #create-fa-page {
-  background-color: #90EE90;
+  
   width: 100%;
 }
 
 /* Create FA Form */
 
 #fa-form-container {
-  width: 75%;
-  background-color: blueviolet;
+  width: 100%;
+  
 }
 
 #fa-form {
-  display: inline-block;
-  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  margin: auto; 
+  height: 350px;
+  border-radius: 10px;
+  border: 1px black;
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 50px;
+  margin-top: 20px;
 
 }
 
-#comment-box {
-  border: 1px solid black;
-  height: 100px;
-  width: 250px;
+#fa-form p {
+  width: 100%;
+  padding-left: 15px;
+}
 
+#text-area {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
 }
 
 /* Log Container */
@@ -134,19 +155,107 @@ a:hover {
   
 }
 
+#route-name {
+  padding-top: 5px;
+  padding-left: 5px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.route-fields {
+  display: inline;
+}
+
+.route-fields h5{
+  font-size: 12px;
+  padding-left: 30px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.route-fields p{
+  font-size: 12px;
+  padding-left: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.save {
+  background-color: white;
+  border: 1px solid black;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+
 #login {
   background-color: rgba(255, 255, 255, 0.5);
-  width: 75%;
-  height: 150px;
+  width: 50%;
+  margin: auto; 
+  height: 125px;
   border-radius: 10px;
   border: 1px black;
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+
+}
+
+#login p {
+  width: 100%;
+  padding-left: 15px;
 }
 
 #signup {
   background-color: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  margin: auto; 
+  height: 250px;
+  border-radius: 10px;
+  border: 1px black;
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
+
+#signup p {
+  width: 100%;
+  padding-left: 15px;
+}
+
 
 .star-rating:hover {
   color: yellow;
   
+}
+
+
+#route-search  {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
+  padding-bottom: 15px;
+  border-radius: 10px;
+  
+}
+
+#route-search-container {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  
+}
+
+.submit {
+  background-color: white;
+  border: 1px solid black;
+  font-weight: bold;
+  border-radius: 8px;
 }

@@ -38,7 +38,7 @@ function Login({ onLogin }) {
                 <label for="password">Password: </label>
                 <input type="password" name="password" value={password} onChange={(e)=> setPassword(e.target.value)}></input>
               </p>
-                <button type="submit">Login</button>
+                <button className="submit" type="submit">Login</button>
             </form>
         </div>
     )

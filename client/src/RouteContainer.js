@@ -2,7 +2,7 @@ import RouteCard from './RouteCard'
 import {useState, useEffect} from 'react'
 import RouteSearch from './RouteSearch'
 
-function RouteContainer() {
+function RouteContainer({user}) {
 
     const [searchTerm, setSearchTerm] = useState("")
     const [routeList, setRouteList] = useState([])
@@ -16,7 +16,7 @@ function RouteContainer() {
 // const routelistings = routeList.map(route => <RouteCard route={route} key={route.id} handleAddRoute={handleAddRoute} />)
 const searchedRoutes = routeList.filter(route => {
     return route.name.toLowerCase().includes(searchTerm.toLowerCase()) || route.crag.toLowerCase().includes(searchTerm.toLowerCase())})
-const returnedRoutes = searchedRoutes.map(route => <RouteCard route={route} key={route.id} handleAddRoute={handleAddRoute} />)
+const returnedRoutes = searchedRoutes.map(route => <RouteCard route={route} key={route.id} handleAddRoute={handleAddRoute} user={user} />)
 
 function handleAddRoute(newRoute) {
     setRouteList([...routeList, newRoute])
@@ -25,7 +25,7 @@ function handleAddRoute(newRoute) {
     return(
         <div id="route-container">
             <RouteSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-            Route container
+            
             {returnedRoutes}
             {/* {routelistings} */}
         </div>
