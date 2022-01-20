@@ -7,6 +7,12 @@ class CreateLogs < ActiveRecord::Migration[6.1]
       t.text :notes
       t.integer :type_id
       t.integer :grade_id
+      t.string :name
+      t.string :country
+      t.string :crag
+      t.text :comments
+      t.string :coordinates
+      t.boolean :gym_route
 
       t.timestamps
     end

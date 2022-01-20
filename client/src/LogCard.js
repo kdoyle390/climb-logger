@@ -1,7 +1,8 @@
-function LogCard() {
+function LogCard({log, user}) {
     return(
         <div id="log-card">
-            Log Card
+            Route Id:{log.route_id}
+            Route logged by: {user.first_name}
         </div>
     )
 

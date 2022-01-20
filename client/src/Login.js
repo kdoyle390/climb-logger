@@ -6,7 +6,7 @@ function Login({ onLogin }) {
     const [password, setPassword] = useState("");
 
     function handleSubmit(e) {
-        e.preventDefault();
+        e.preventDefault()
         fetch("http://localhost:3000/login", {
           method: "POST",
           headers: {
@@ -18,15 +18,26 @@ function Login({ onLogin }) {
             r.json().then((user) => onLogin(user));
           }
         });
+        console.log('function ran')
       }
+
+// function returnuser() {
+//         fetch('http://localhost:3000/me') 
+//         .then(resp => resp.json())
+//         .then(data => console.log(data))
+// }    
 
     return(
         <div id="login">
             <form onSubmit={handleSubmit}>
+              <p>
                 <label for="user-email">Email: </label>
                 <input type="email" name="user-email" value={email} onChange={(e)=> setEmail(e.target.value)}></input>
+              </p>  
+              <p>
                 <label for="password">Password: </label>
                 <input type="password" name="password" value={password} onChange={(e)=> setPassword(e.target.value)}></input>
+              </p>
                 <button type="submit">Login</button>
             </form>
         </div>

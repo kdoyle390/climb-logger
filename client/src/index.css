@@ -101,16 +101,19 @@ a:hover {
 
 #log-container {
   border: 1px solid black;
-  background-color: lightseagreen;
+  background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
 }
 
 /* Log Card */
 
 #log-card {
-  background-color: yellow;
+  width: 80%;
   border: 1px solid black;
-  width: 50%;
+  background-color: white;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #find-a-route {
@@ -122,17 +125,25 @@ a:hover {
 /* Route Card */
 
 #route-card {
-  width: 50%;
+  width: 80%;
   border: 1px solid black;
   background-color: white;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 #login {
-  background-color: blue;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 75%;
+  height: 150px;
+  border-radius: 10px;
+  border: 1px black;
 }
 
 #signup {
-  background-color: lavender;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .star-rating:hover {

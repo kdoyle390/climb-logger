@@ -28,6 +28,6 @@ class LogsController < ApplicationController
     private
 
     def log_params
-        params.permit(:user_id, :route_id, :type_id, :grade_id, :notes, )
+        params.permit(:user_id, :route_id, :type_id, :grade_id, :notes, :name, :country, :crag, :comments, :coordinates, :gym_route)
     end
 end
