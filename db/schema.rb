@@ -30,6 +30,12 @@ ActiveRecord::Schema.define(version: 2022_01_13_171748) do
     t.text "notes"
     t.integer "type_id"
     t.integer "grade_id"
+    t.string "name"
+    t.string "country"
+    t.string "crag"
+    t.text "comments"
+    t.string "coordinates"
+    t.boolean "gym_route"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
     def create
-        user = User.find_by(email: params[:email])
+        user = User.find_by!(email: params[:email])
         session[:user_id] = user.id
         render json: user
     end 

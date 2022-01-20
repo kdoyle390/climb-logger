@@ -10,7 +10,7 @@ function RouteCard({route: {id, name, comments, grade_id, user_id, grade, type_i
 
         const logData = {
             route_id: id,
-            user_id: user,
+            user_id: user.id,
             type_id: type_id,
             grade_id: grade_id,
             name: name,

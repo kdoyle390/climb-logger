@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function FAForm({handleAddRoute}) {
+function FAForm({handleAddRoute, user}) {
 
 // need to figure out how to handle radio buttons on submit and how to grab user's id when adding route
 // need to also figure out how to get the id values and to have them appear as ints in state
@@ -23,7 +23,7 @@ const [gymRoute, setGymRoute] = useState(null)
         const routeData = {
             grade_id: gradeId,
             type_id: typeId, 
-            user_id: userId,
+            user_id: user.id,
             name: name,
             country: country,
             crag: crag,

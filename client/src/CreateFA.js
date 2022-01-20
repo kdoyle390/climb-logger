@@ -7,7 +7,7 @@ function CreateFA({user}) {
         <>
         <div id="create-fa-page">
             
-            <FAForm />
+            <FAForm user={user} />
         </div>
         
         </>

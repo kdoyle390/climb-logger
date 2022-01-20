@@ -15,7 +15,7 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/me").then((response) => {
+    fetch("/me").then((response) => {
       if (response.ok) {
         response.json().then((user) => setUser(user))
         .then(console.log(user));
@@ -30,7 +30,7 @@ function handleLogin(user) {
   console.log(user)
 }
 
-function onLogout() {
+function handleLogout() {
   setUser(null)
 }
 
@@ -68,7 +68,7 @@ function onLogout() {
       <Routes>
         <Route path ="/" element={<Home />} />
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
-        <Route path="/logout" element={<Logout onLogout={onLogout} />} />
+        <Route path="/logout" element={<Logout onLogout={handleLogout} user={user} />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/create-route" element={<CreateFA user={user} />} />
         <Route path="/logs" element={<LogContainer user={user} />} />
