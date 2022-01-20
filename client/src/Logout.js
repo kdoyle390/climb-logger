@@ -7,7 +7,7 @@ function Logout({onLogout}) {
       }
 
     return(
-        <button className="submit" type="submit" onSubmmit={handleLogout} >Logout</button>
+        <button className="submit" type="submit" onSubmit={handleLogout} >Logout</button>
     )
 }
 

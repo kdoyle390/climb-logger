@@ -14,7 +14,7 @@ function LogContainer({user}) {
 
 console.log(user)
 
-const filteredlistings = logList.filter(log => user.id == log.user_id)
+const filteredlistings = logList.filter(log => user.id === log.user_id)
 console.log(filteredlistings)
 const loglistings = filteredlistings.map(log => <LogCard key={log.id} log={log} user={user} />)
 
