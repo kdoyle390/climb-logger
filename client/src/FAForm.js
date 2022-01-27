@@ -40,6 +40,14 @@ const [gymRoute, setGymRoute] = useState(null)
         })
         .then((r)=> r.json())
         .then((newRoute) => console.log(newRoute))
+        setGradeId(null)
+        setTypeId(null)
+        setName("")
+        setCountry("")
+        setCrag("")
+        setComments("")
+        setCoordinates("")
+        setGymRoute(null)
     }
 
     return(

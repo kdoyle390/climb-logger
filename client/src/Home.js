@@ -16,7 +16,7 @@ function Home() {
             </div>
             <div id="create">
                 <h2>Create a First Ascent</h2>
-                <p>We know you'll be climbing more routes than those that have already been defined. Create your own route to keep your log growing. Let us know if the routes are gym routes or outdoors, what type of climb it was, and the grade.</p>
+                <p>We know you'll be climbing more routes than those that have already been defined. Create your own route to keep your log growing. Let us know if the routes are gym routes or outdoors, what type of climb it was, and the grade. A big part of climbing is about sharing with the community - so any route that gets added here will be available for all users to add to their logs via Find a Route page. </p>
             </div>
             <div id="your-logs">
                 <h2>Your Log</h2>
