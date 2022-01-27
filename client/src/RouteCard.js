@@ -1,6 +1,6 @@
 import Rating from './Rating'
 
-function RouteCard({route: {id, name, comments, grade_id, user_id, grade, type_id, country, crag, coordinates, gym_route}, user}) {
+function RouteCard({route: {id, name, comments, grade_id, user_id, type_id, country, crag, coordinates, gym_route}, user}) {
  
     // need to update current_user to be the id of the user currently logged in
   const current_user = 5;
@@ -46,14 +46,14 @@ function RouteCard({route: {id, name, comments, grade_id, user_id, grade, type_i
                     <h5>Country:</h5>
                     <p> {country} </p>
                 </div>
-                {/* <div className="route-fields">
+                <div className="route-fields">
                     <h5>Route grade:</h5>
-                    <p> {grade_id} </p>
-                </div> */}
-                {/* <div className="route-fields">
+                    <p> {grade_id.grade} </p>
+                </div>
+                <div className="route-fields">
                     <h5>Created by:</h5>
                     <p>{user}</p>
-                </div> */}
+                </div>
             <button className="save" type="submit" onClick={(e) => logRoute(e)}>Log this Route</button>
         <Rating routeid={id} />
         </div>

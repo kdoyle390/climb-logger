@@ -1,10 +1,10 @@
 import LogCard from './LogCard'
 import { useState, useEffect } from 'react'
 
-function LogContainer({user}) {
+function LogContainer({user, loggedIn}) {
 
     const [logList, setLogList] = useState([])
-
+    
 
     useEffect(() => {
     fetch('http://localhost:3000/logs')
@@ -20,8 +20,7 @@ const loglistings = filteredlistings.map(log => <LogCard key={log.id} log={log} 
 
     return(
         <div id="log-container">
-            Log Container
-            {loglistings}
+            {loggedIn ? <p>Please log in to view your logged climbs</p> : loglistings}
         </div>
     )
 }

@@ -67,15 +67,49 @@ a:visted {
 
 #home-container {
   width: 100%;
-  background-color: grey;
-  color: white;;
+  color: white;
+
     
 }
 
+#home-container div {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color:rgba(255, 255, 255, 0.30);
+  margin-top: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#home-container div h2 {
+  font-family: 'Russo One';
+  
+}
+
+#about {
+  color: #5D2E8C;
+}
+
+#find {
+  color: #32E875;
+}
+
+#create {
+  color: #F42272;
+}
+
+#your-logs {
+  color: #56EEF4;
+}
+
+#home-container div p {
+  width: 75%;
+  margin: auto;
+  font-weight: bolder;
+}
 
 
 #create-fa-page {
-  
   width: 100%;
 }
 
@@ -258,4 +292,5 @@ a:visted {
   border: 1px solid black;
   font-weight: bold;
   border-radius: 8px;
+  margin: auto;
 }

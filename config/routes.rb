@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :logs
   resources :routes do
     resources :users, only: [:show]
-    resources :grades, only: [:show]
+    resources :grades, only: [:show, :index]
   end
   resources :users do
     resources :logs, only: [:index]

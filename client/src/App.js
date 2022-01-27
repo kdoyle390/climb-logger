@@ -13,6 +13,7 @@ function App() {
 
   
   const [user, setUser] = useState(null);
+  // const [loggedIn, setLoggedIn] = useState(false)
 
   useEffect(() => {
     fetch("/me").then((response) => {
@@ -37,15 +38,7 @@ function handleLogout() {
   return (
   <>
     <div className="header">
-      <h1>Climb Logger</h1>
-    </div>
-
-    {/* <Login onLogin={handleLogin}/> */}
-    <nav id="navbar">    
-        <a className="page-links">
-          <Link to="/">Home</Link>
-        </a>
-        <a className="page-links">
+    <a className="page-links">
           <Link to="/login">Login</Link>
         </a>
         <a className="page-links">
@@ -54,15 +47,26 @@ function handleLogout() {
         <a className="page-links">
           <Link to="/signup">Signup</Link>
         </a>
+      <h1>Cl!mb</h1>
+    {/* <div>Logged in as {user.first_name}</div> */}
+    </div>
+    
+    {/* <Login onLogin={handleLogin}/> */}
+    <nav id="navbar">    
+        <a className="page-links">
+          <Link to="/">Home</Link>
+        </a>
+
+        <a className="page-links">
+          <Link to="/search">Find a Route</Link>
+        </a>
         <a className="page-links">
           <Link to="/create-route">Create a First Ascent</Link>
         </a>
         <a className="page-links">
           <Link to="/logs">Your Log</Link>
         </a>
-        <a className="page-links">
-          <Link to="/search">Find a Route</Link>
-        </a>
+        
 
     </nav>
       <Routes>

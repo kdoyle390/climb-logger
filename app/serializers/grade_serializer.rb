@@ -1,3 +1,3 @@
 class GradeSerializer < ActiveModel::Serializer
-  attributes :id, :grade, :type_id, :int
+  attributes :id, :grade, :type_id
 end

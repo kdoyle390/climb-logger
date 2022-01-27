@@ -1,8 +1,12 @@
 function LogCard({log, user}) {
     return(
         <div id="log-card">
-            Route Id:{log.route_id}
-            Route logged by: {user.first_name}
+            Route:{log.name}
+            Crag: {log.crag}
+            Country: {log.country}
+            Type: {log.type_id}
+            Grade: {log.grade_id}
+            
         </div>
     )
 
