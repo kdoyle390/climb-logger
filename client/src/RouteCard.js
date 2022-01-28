@@ -50,10 +50,6 @@ function RouteCard({route: {id, name, comments, grade_id, user_id, type_id, coun
                     <h5>Route grade:</h5>
                     <p> {grade_id.grade} </p>
                 </div>
-                <div className="route-fields">
-                    <h5>Created by:</h5>
-                    <p>{user}</p>
-                </div>
             <button className="save" type="submit" onClick={(e) => logRoute(e)}>Log this Route</button>
         <Rating routeid={id} />
         </div>

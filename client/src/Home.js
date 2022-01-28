@@ -6,11 +6,11 @@ function Home() {
         <div id="home-container">
             <div id="about">
                 <h2>What is Cl!mb?</h2>
-                <p>Cl!mb is designed for rock-climbers who want to start recording their climbed routes.</p>
+                <p>Cl!mb is an app designed for rock-climbers who want to start recording their sends. Gone are the days of using separate apps to record outdoor and indoor sends. Cl!mb allows you to record both to one location.</p>
             </div>
             <div id="find">
                 <h2>Find a Route</h2>
-                <p>Search for routes to log based on the name of the route or the name of the crag the route is located at.
+                <p>Search for routes to log based on the name of the route or the name of the crag the route is located on.
                     Sent the route? Be sure it add it to your Log and give it a rating.
                 </p>
             </div>
@@ -20,7 +20,7 @@ function Home() {
             </div>
             <div id="your-logs">
                 <h2>Your Log</h2>
-                <p>Keep track of all the routes you've climbed or use your log to guage if you're making progress. </p>
+                <p>Keep track of all the routes you've climbed or use your log to gauge if you're making progress. </p>
             </div>
             
         </div>

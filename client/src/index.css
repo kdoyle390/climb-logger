@@ -87,19 +87,19 @@ a:visted {
 }
 
 #about {
-  color: #5D2E8C;
+  color: #4d194d;
 }
 
 #find {
-  color: #32E875;
+  color: #344e41;
 }
 
 #create {
-  color: #F42272;
+  color: #a4133c;
 }
 
 #your-logs {
-  color: #56EEF4;
+  color: #277da1;
 }
 
 #home-container div p {
@@ -189,6 +189,23 @@ a:visted {
   
 }
 
+#log-card {
+  width: 70%;
+  border: 1px solid black;
+  background-color: rgba(32, 58, 41, 0.5);
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+#log-name {
+  padding-top: 5px;
+  padding-left: 5px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 #route-name {
   padding-top: 5px;
   padding-left: 5px;
@@ -213,12 +230,32 @@ a:visted {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+.log-fields {
+  display: inline;
+}
 
+.log-fields h5{
+  font-size: 12px;
+  padding-left: 30px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.log-fields p{
+  font-size: 12px;
+  padding-left: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 .save {
   background-color: white;
   border: 1px solid black;
   font-weight: bold;
   border-radius: 8px;
+}
+
+.save:hover{
+  background-color: rgba(32, 58, 41, 0.5);
 }
 
 
@@ -293,4 +330,8 @@ a:visted {
   font-weight: bold;
   border-radius: 8px;
   margin: auto;
+}
+
+.submit:hover{
+  background-color: rgba(32, 58, 41, 0.5);
 }

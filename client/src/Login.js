@@ -20,8 +20,8 @@ function Login({ onLogin}) {
           }
         });
         console.log('function ran')
-        setEmail('')
-        setPassword('')
+        // setEmail('')
+        // setPassword('')
         // setLoggedIn(true)
       }
 

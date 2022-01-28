@@ -6,7 +6,7 @@ function Signup() {
   const [lastName, setLastName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-    
+  const [confirmPassword, setConfirmPassword] = useState("")
   
     function handleSubmit(e) {
         e.preventDefault()
@@ -25,11 +25,19 @@ function Signup() {
         })
         .then((r)=> r.json())
         .then((newUser) => console.log(newUser))
+        setEmail("")
+        setPassword('')
+        setConfirmPassword('')
+        setFirstName("")
+        setLastName("")
     }
+
+    
 
     return(
         <div id="signup">
-            <form id='signup-form' onSubmit={handleSubmit}>
+            <form id='signup-form' onSubmit={handleSubmit} >
+           
                 <p>
                     <label for="first-name">First name: </label>
                     <input type="text" name="first-name" onChange={(e) => setFirstName(e.target.value)} value={firstName}></input>
@@ -48,9 +56,9 @@ function Signup() {
                 </p>
                 <p>
                     <label for="confirm-password">Confirm password:</label>
-                    <input type="password"></input>
+                    <input type="password" onChange={(e) => setConfirmPassword(e.target.value)} value={confirmPassword}></input>
                 </p>
-                    <input className="submit" type="submit"></input>
+                    <input className="submit" type="submit" ></input>
             </form>
         </div>
     )

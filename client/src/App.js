@@ -13,14 +13,14 @@ function App() {
 
   
   const [user, setUser] = useState(null);
-  // const [loggedIn, setLoggedIn] = useState(false)
+
+
 
   useEffect(() => {
     fetch("/me").then((response) => {
       if (response.ok) {
         response.json().then((user) => setUser(user))
         .then(console.log(user));
-        
       }
     });
   }, []);
@@ -48,7 +48,6 @@ function handleLogout() {
           <Link to="/signup">Signup</Link>
         </a>
       <h1>Cl!mb</h1>
-    {/* <div>Logged in as {user.first_name}</div> */}
     </div>
     
     {/* <Login onLogin={handleLogin}/> */}

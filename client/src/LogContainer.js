@@ -20,6 +20,7 @@ const loglistings = filteredlistings.map(log => <LogCard key={log.id} log={log} 
 
     return(
         <div id="log-container">
+            <p></p>
             {loggedIn ? <p>Please log in to view your logged climbs</p> : loglistings}
         </div>
     )
