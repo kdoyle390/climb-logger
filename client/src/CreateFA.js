@@ -1,8 +1,7 @@
 import FAForm from './FAForm'
 
 function CreateFA({user}) {
-    console.log('user info from logged in user hopefully prints below')
-    console.log(user)
+        console.log(user.id)
     return(
         <>
         <div id="create-fa-page">

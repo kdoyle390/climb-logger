@@ -6,7 +6,7 @@ import RouteContainer from './RouteContainer'
 import Login from './Login'
 import Logout from './Logout'
 import Signup from './Signup'
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import { BrowserRouter as Switch, Routes, Route, Link } from "react-router-dom"
 import { useEffect, useState } from 'react'
 
 function App() {
@@ -19,8 +19,9 @@ function App() {
   useEffect(() => {
     fetch("/me").then((response) => {
       if (response.ok) {
-        response.json().then((user) => setUser(user))
-        .then(console.log(user));
+        response.json()
+          .then((user) => setUser(user))
+          .then(console.log(user));
       }
     });
   }, []);

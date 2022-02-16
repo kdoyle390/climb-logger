@@ -1,9 +1,5 @@
 
-function RouteSearch({routeList, searchTerm, setSearchTerm}) {
-
-
-// currently not searching when submit is hit. maybe that's fine and what I want? Do I want them to render automatically? 
-
+function RouteSearch({searchTerm, setSearchTerm}) {
 
     return(
         <div id='route-search-container'>

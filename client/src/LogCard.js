@@ -1,4 +1,4 @@
-function LogCard({log: {name, crag, country, type, grade, comments}, user}) {
+function LogCard({log: {name, crag, country, type, grade, comments}}) {
     return(
         <div id="log-card">
 

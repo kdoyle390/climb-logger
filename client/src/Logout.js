@@ -1,4 +1,4 @@
-function Logout({user, onLogout}) {
+function Logout({onLogout}) {
     
     function handleLogout() {
         fetch("/logout", {
