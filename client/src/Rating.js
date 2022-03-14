@@ -13,6 +13,7 @@ const changeRating = (newRating) => {
     onChange?.(newRating);
 }
 
+// creates and POSTs rating data
 function handleSaveRating(e) {
     e.preventDefault()
     console.log("submit clicked")
@@ -28,7 +29,7 @@ function handleSaveRating(e) {
     },
         body: JSON.stringify(ratingData),
     })
-    .then(res => res.json())
+    .then(resp => resp.json())
     .then(newRating => console.log(newRating))
 }
 

@@ -14,8 +14,8 @@ function Login({ onLogin}) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({ email }),
-        }).then((r) => {
-          if (r.ok) {
+        }).then((resp) => {
+          if (resp.ok) {
             r.json().then((user) => onLogin(user));
           }
         });

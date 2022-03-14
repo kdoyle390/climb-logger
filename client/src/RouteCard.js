@@ -2,15 +2,12 @@ import Rating from './Rating'
 
 function RouteCard({route: {id, name, comments, grade_id, user_id, type_id, country, crag, coordinates, gym_route}, user}) {
  
-    // need to update current_user to be the id of the user currently logged in
-  const current_user = 5;
-
     function logRoute(e) {
         e.preventDefault()
 
         const logData = {
             route_id: id,
-            user_id: user.id,
+            user_id: user_id,
             type_id: type_id,
             grade_id: grade_id,
             name: name,

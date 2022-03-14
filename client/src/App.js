@@ -6,6 +6,7 @@ import RouteContainer from './RouteContainer'
 import Login from './Login'
 import Logout from './Logout'
 import Signup from './Signup'
+// "Switch" appears unused below but app crashes if removed from list
 import { BrowserRouter as Switch, Routes, Route, Link } from "react-router-dom"
 import { useEffect, useState } from 'react'
 
@@ -15,20 +16,17 @@ function App() {
   const [user, setUser] = useState(null);
 
 
-
   useEffect(() => {
     fetch("/me").then((response) => {
-      if (response.ok) {
-        response.json()
-          .then((user) => setUser(user))
-          .then(console.log(user));
+      if (resp.ok) {
+        resp.json()
+          .then((user) => setUser(user));
       }
     });
   }, []);
 
 function handleLogin(user) {
   setUser(user);
-  console.log('handlelogin ran')
   console.log(user)
 }
 
@@ -51,7 +49,7 @@ function handleLogout() {
       <h1>Cl!mb</h1>
     </div>
     
-    {/* <Login onLogin={handleLogin}/> */}
+
     <nav id="navbar">    
         <a className="page-links">
           <Link to="/">Home</Link>
@@ -69,6 +67,7 @@ function handleLogout() {
         
 
     </nav>
+    {/* route handling */}
       <Routes>
         <Route path ="/" element={<Home />} />
         <Route path="/login" element={<Login onLogin={handleLogin} />} />

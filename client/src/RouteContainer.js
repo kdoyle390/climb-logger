@@ -7,13 +7,13 @@ function RouteContainer({user}) {
     const [searchTerm, setSearchTerm] = useState("")
     const [routeList, setRouteList] = useState([])
 
-
+// GETs routes
     useEffect(() => {
     fetch('http://localhost:3000/routes')
         .then(resp => resp.json())
         .then(data => setRouteList(data))
   }, [])
-
+// filters out routes when searching
 const searchedRoutes = routeList.filter(route => {
     return route.name.toLowerCase().includes(searchTerm.toLowerCase()) || route.crag.toLowerCase().includes(searchTerm.toLowerCase())})
 const returnedRoutes = searchedRoutes.map(route => <RouteCard route={route} key={route.id} handleAddRoute={handleAddRoute} user={user} />)

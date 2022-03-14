@@ -8,6 +8,7 @@ function Signup() {
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
   
+//   creates and posts new user object
     function handleSubmit(e) {
         e.preventDefault()
         const userData = {

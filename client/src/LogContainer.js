@@ -5,7 +5,7 @@ function LogContainer({user, loggedIn}) {
 
     const [logList, setLogList] = useState([])
     
-
+// GETs all of a user's logs
     useEffect(() => {
     fetch('http://localhost:3000/logs')
     .then(resp => resp.json())
