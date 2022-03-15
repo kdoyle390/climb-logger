@@ -16,7 +16,7 @@ function Login({ onLogin}) {
           body: JSON.stringify({ email }),
         }).then((resp) => {
           if (resp.ok) {
-            r.json().then((user) => onLogin(user));
+            resp.json().then((user) => onLogin(user));
           }
         });
         console.log('function ran')
