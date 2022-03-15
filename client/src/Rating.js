@@ -23,7 +23,7 @@ function handleSaveRating(e) {
         route_id: routeid,
         rating: rating
     }
-    fetch("http://localhost:3000/ratings", {
+    fetch("/ratings", {
         method: "POST",
         headers: {"Content-Type": "application/json",
     },

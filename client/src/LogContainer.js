@@ -7,7 +7,7 @@ function LogContainer({user, loggedIn}) {
     
 // GETs all of a user's logs
     useEffect(() => {
-    fetch('http://localhost:3000/logs')
+    fetch('/logs')
     .then(resp => resp.json())
     .then(data => setLogList(data))
   }, [])
