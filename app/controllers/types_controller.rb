@@ -7,7 +7,7 @@ class TypesController < ApplicationController
 
     def show
         type = Type.find_by(id: params[:id])
-        if log
+        if type
             render json: type
         else 
             render json: { error: "record not found"}, status: :not_found
