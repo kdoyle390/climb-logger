@@ -28,7 +28,7 @@ class RoutesController < ApplicationController
 
 private 
     def route_params
-        params.permit(:grade_id, :type_id, :user_id, :name, :country, :crag, :comments, :coordinates, :gym_route, :log)
+        params.permit(:grade_id, :type_id, :name, :country, :crag, :comments, :coordinates, :gym_route, :log)
     end
 
     

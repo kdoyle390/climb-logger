@@ -7,7 +7,7 @@ function LogContainer({user, loggedIn}) {
     
 // GETs all of a user's logs
     useEffect(() => {
-    fetch('/logs')
+    fetch('http://localhost:3000/logs')
     .then(resp => resp.json())
     .then(data => setLogList(data))
   }, [])
@@ -21,8 +21,10 @@ const requestLogin = <p>Please log in to view your logged climbs</p>
 
     return(
         <div id="log-container">
-            <p></p>
+            <p>
             {loggedIn ? requestLogin : loglistings}
+            </p>
+            
         </div>
     )
 }

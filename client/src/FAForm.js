@@ -21,7 +21,6 @@ const [gymRoute, setGymRoute] = useState(null)
         const routeData = {
             grade_id: gradeId,
             type_id: typeId, 
-            user_id: user.id,
             name: name,
             country: country,
             crag: crag,
@@ -29,7 +28,7 @@ const [gymRoute, setGymRoute] = useState(null)
             coordinates: coordinates,
             gym_route: gymRoute
         };
-        fetch('/routes', {
+        fetch('http://localhost:3000/routes', {
             method: "POST", 
             headers: {
                 "Content-Type": "application/json",
@@ -38,14 +37,14 @@ const [gymRoute, setGymRoute] = useState(null)
         })
         .then((r)=> r.json())
         .then((newRoute) => console.log(newRoute))
-        setGradeId(null)
-        setTypeId(null)
+        setGradeId()
+        setTypeId()
         setName("")
         setCountry("")
         setCrag("")
         setComments("")
         setCoordinates("")
-        setGymRoute(null)
+        setGymRoute()
     }
 
     return(

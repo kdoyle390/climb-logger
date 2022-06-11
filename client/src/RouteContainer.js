@@ -9,7 +9,7 @@ function RouteContainer({user}) {
 
 // GETs routes
     useEffect(() => {
-    fetch('/routes')
+    fetch('http://localhost:3000/routes')
         .then(resp => resp.json())
         .then(data => setRouteList(data))
   }, [])
